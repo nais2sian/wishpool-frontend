@@ -87,7 +87,7 @@ Runs unit tests in watch mode.
 
 ## License and Credits
 
-This project is based on the original **kupipodariday-frontend** code by **<yandex-praktikum>** and is distributed under the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).
+This project is based on the original **kupipodariday-frontend** code by **yandex-praktikum** and is distributed under the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).
 
 See the `LICENSE` file for the full license text.
 

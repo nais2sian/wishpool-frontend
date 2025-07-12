@@ -101,7 +101,7 @@ export const SignUp = ({ extraClass = "" }) => {
       <h2
         className={`text text_type_h2 text_color_primary mb-16 ${styles.title}`}
       >
-        {`Регистрация ${step === 1 ? "1/2" : "2/2"}`}
+        {`Sign up ${step === 1 ? "1/2" : "2/2"}`}
       </h2>
       <form className={styles.form}>
         {step === 1 ? (
@@ -117,14 +117,14 @@ export const SignUp = ({ extraClass = "" }) => {
               className={styles.back_to_first_step}
               onClick={handleBackToFirstStep}
             >
-              Вернуться на первый шаг
+              Return to the first step
             </button>
           </>
         )}
         <Button
           type="button"
           kind="secondary"
-          text={`${step === 1 ? "Далее" : "Зарегистрироваться"}`}
+          text={`${step === 1 ? "Next" : "Sign up"}`}
           disabled={step === 1 ? stepOneDisabled : stepTwoDisabled}
           extraClass={styles.btn}
           onClick={handleSubmit}
@@ -134,13 +134,13 @@ export const SignUp = ({ extraClass = "" }) => {
         <p
           className={`text text_type_main text_color_primary mb-9 ${styles.text}`}
         >
-          Уже зарегистрированы?
+          Already registered?
         </p>
         <NavLink
           to="/signin"
           className={`text text_type_button text_color_primary ${styles.nav}`}
         >
-          Войти
+          Log in
         </NavLink>
       </div>
     </div>
@@ -154,8 +154,8 @@ const StepOne = ({ onChangeInput, data }) => {
         name="username"
         type="username"
         id={1}
-        placeholder="Придумайте юзернейм"
-        label="Юзернейм"
+        placeholder="Create a username"
+        label="Username"
         value={data.username}
         onChange={onChangeInput}
         extraClass="mb-16"
@@ -166,7 +166,7 @@ const StepOne = ({ onChangeInput, data }) => {
         name="email"
         type="email"
         id={2}
-        placeholder="Укажите тут"
+        placeholder="Specify here"
         label="E-mail"
         value={data.email}
         onChange={onChangeInput}
@@ -177,8 +177,8 @@ const StepOne = ({ onChangeInput, data }) => {
         name="password"
         type="password"
         id={3}
-        placeholder="Придумайте пароль"
-        label="Пароль"
+        placeholder="Create a password"
+        label="Password"
         value={data.password}
         onChange={onChangeInput}
         minLength={MINIMUM_PASSWORD_LENGTH}
@@ -195,8 +195,8 @@ const StepTwo = ({ onChangeInput }) => {
         name="about"
         type="about"
         id={5}
-        placeholder="Расскажите о себе"
-        label="О себе"
+        placeholder="Tell us about yourself"
+        label="About yourself"
         onChange={onChangeInput}
         extraClass="mb-16"
         maxLength={MAXIMUM_DESCRIPTION_LENGTH}
@@ -205,8 +205,8 @@ const StepTwo = ({ onChangeInput }) => {
         name="avatar"
         type="url"
         id={7}
-        placeholder="Укажите тут ссылку на аватар"
-        label="Аватар"
+        placeholder="Specify the avatar link here"
+        label="Avatar"
         onChange={onChangeInput}
         extraClass="mb-16"
       />

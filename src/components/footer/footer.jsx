@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
-import logoIcon from "../../images/icons/logo-mini.svg";
+import logo from "../../images/icons/wishpool.svg";
 
 import styles from "./footer.module.css";
 
@@ -18,10 +18,10 @@ export const Footer = ({ extraClass = "" }) => {
   return (
     <footer className={footerClassList}>
       <div className={styles.content}>
-        <img src={logoIcon} alt="Логотип." />
+        <img src={logo} alt="Logo." style={{width:"160px", height:"auto"}}/>
         <p
           className={`text text_type_footer text_color_primary ${styles.text}`}
-        >{`${"\u{00A9}"}${new Date().getFullYear()}, Купи Подари Дай`}</p>
+        >{`${"\u{00A9}"}${new Date().getFullYear()},  WishPool`}</p>
       </div>
     </footer>
   );

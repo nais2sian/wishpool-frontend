@@ -36,7 +36,7 @@ export const GoodCard = ({
         <p
           className={`text text_type_h2 text_color_primary mb-4 ${styles.price}`}
         >
-          {`${price} руб.`}
+          {`${price} EUR`}
         </p>
         <p
           className={`text text_type_main text_color_primary mb-10 ${styles.name}`}
@@ -47,7 +47,7 @@ export const GoodCard = ({
         {pathname !== "/wishlist" && (
           <Button
             extraClass={styles.btn}
-            text="Добавить в вишлист"
+            text="Add to wishlist"
             type="button"
             kind="additional"
             onClick={handleCopyClick}

@@ -55,15 +55,15 @@ export const SignIn = ({ extraClass = "" }) => {
       <h2
         className={`text text_type_h2 text_color_primary mb-16 ${styles.title}`}
       >
-        Вход
+        Login
       </h2>
       <form className={styles.form} onSubmit={authorizeUser}>
         <Input
           name={"username"}
           type="text"
           id={1}
-          placeholder="Введите имя пользователя"
-          label="Юзернейм"
+          placeholder="Enter a username"
+          label="Username"
           onChange={onChangeInput}
           extraClass="mb-16"
           minLength={MINIMUM_USERNAME_LENGTH}
@@ -73,8 +73,8 @@ export const SignIn = ({ extraClass = "" }) => {
           name={"password"}
           type="password"
           id={2}
-          placeholder="Введите пароль"
-          label="Пароль"
+          placeholder="Enter a password"
+          label="Password"
           onChange={onChangeInput}
           minLength={MINIMUM_PASSWORD_LENGTH}
           required={true}
@@ -83,7 +83,7 @@ export const SignIn = ({ extraClass = "" }) => {
         <Button
           type="submit"
           kind="secondary"
-          text="Войти"
+          text="Login"
           extraClass={styles.btn}
           disabled={submitDisabled}
         />
@@ -92,13 +92,13 @@ export const SignIn = ({ extraClass = "" }) => {
         <p
           className={`text text_type_main text_color_primary mb-9 ${styles.text}`}
         >
-          Вы — новый пользователь?
+          New user?
         </p>
         <NavLink
           to="/signup"
           className={`text text_type_button text_color_primary ${styles.nav}`}
         >
-          Зарегистрироваться
+          Sign up
         </NavLink>
       </div>
     </div>

@@ -17,7 +17,7 @@ export const UserSupportedCard = ({
         <p
           className={`text text_type_small text_color_primary mb-2 ${styles.label}`}
         >
-          Имя
+          Name
         </p>
         <NavLink
           to="/user"
@@ -30,17 +30,17 @@ export const UserSupportedCard = ({
         <p
           className={`text text_type_small text_color_primary mb-2 ${styles.label}`}
         >
-          Сумма
+          Amount
         </p>
         <p
           className={`text text_type_main text_color_primary`}
-        >{`${amount} руб.`}</p>
+        >{`${amount} EUR`}</p>
       </div>
       <div className={`ml-10 ${styles.data_box}`}>
         <p
           className={`text text_type_small text_color_primary mb-2 ${styles.label}`}
         >
-          Дата
+          Date
         </p>
         <p className={`text text_type_main text_color_primary`}>{date}</p>
       </div>

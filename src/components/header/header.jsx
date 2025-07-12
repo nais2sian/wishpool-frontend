@@ -6,7 +6,7 @@ import { Textarea } from "../ui";
 import { Modal } from "../ui/modal/modal";
 import { Input } from "../ui/input/input";
 
-import logo from "../../images/icons/logo.svg";
+import logo from "../../images/icons/wishpool.svg";
 import giftIcon from "../../images/icons/gift.svg";
 import likeIcon from "../../images/icons/like.svg";
 import profileIcon from "../../images/icons/profile.svg";
@@ -56,7 +56,7 @@ export const Header = ({ extraClass = "" }) => {
   return (
     <header className={`${styles.header} ${extraClass}`}>
       <NavLink className={styles.nav} to="/">
-        <img className={styles.logo} src={logo} alt="Логотип." />
+        <img className={styles.logo} src={logo} alt="Logo." style={{width:"160px", height:"auto"}}/>
       </NavLink>
       {isLoggedIn && (
         <HeaderLinks
@@ -67,7 +67,7 @@ export const Header = ({ extraClass = "" }) => {
       <Button
         type="button"
         kind="primary"
-        text={`${isLoggedIn ? "Добавить подарок" : "Войти в профиль"}`}
+        text={`${isLoggedIn ? "Add a gift" : "Login"}`}
         onClick={onSubmit}
       />
       {isProfilePopupOpen && (
@@ -79,7 +79,7 @@ export const Header = ({ extraClass = "" }) => {
 };
 
 const HeaderLinks = ({ handleProfilePopupOpen, userName }) => {
-  const profileLabel = userName ? `Профиль ${userName}` : `Профиль`;
+  const profileLabel = userName ? `Account ${userName}` : `Account`;
 
   const setInactive = (isActive) => {
     const inactiveClassName = `${styles.nav} ${styles.nav_inactive}`;
@@ -91,21 +91,21 @@ const HeaderLinks = ({ handleProfilePopupOpen, userName }) => {
     <ul className={styles.nav_box}>
       <li className={styles.nav_link}>
         <NavLink className={setInactive} to="/gifts/line">
-          <img src={giftIcon} alt="Иконка подарков." />
-          <p className="text text_type-main text_color_primary ml-3">Подарки</p>
+          <img src={giftIcon} alt="Gifts icon." />
+          <p className="text text_type-main text_color_primary ml-3">Gifts</p>
         </NavLink>
       </li>
       <li className={styles.nav_link}>
         <NavLink className={setInactive} to="/wishlist">
-          <img src={likeIcon} alt="Иконка лайка." />
+          <img src={likeIcon} alt="Like icon." />
           <p className="text text_type-main text_color_primary ml-3">
-            Мой вишлист
+            My wishlist
           </p>
         </NavLink>
       </li>
       <li className={styles.nav_link}>
         <button className={styles.nav} onClick={handleProfilePopupOpen}>
-          <img src={profileIcon} alt="Иконка профиля." />
+          <img src={profileIcon} alt="Profile icon." />
           <p className="text text_type_main text_color_primary ml-3">
             {profileLabel}
           </p>
@@ -145,40 +145,40 @@ const GiftAddModal = ({ onClose }) => {
   return (
     <Modal onClose={onClose} extraClass={styles.gift_modal} isCloseBtn={true}>
       <form className={styles.gift_form} onSubmit={submitGift} ref={formRef}>
-        <h2 className="text text_type_h2 mb-16">Добавить подарок</h2>
+        <h2 className="text text_type_h2 mb-16">Add a gift</h2>
         <Input
           type="text"
           id={20}
           extraClass="mb-12"
-          label="Название подарка"
+          label="Gift name"
           name="name"
           onChange={onFormChange}
-          placeholder="Укажите название подарка"
+          placeholder="Please provide the name of the gift"
           required
         />
         <Input
           type="url"
           extraClass="mb-12"
           name="link"
-          label="Ссылка на магазин"
+          label="Link to the store"
           onChange={onFormChange}
-          placeholder="Укажите ссылку"
+          placeholder="Please provide a link"
           required
         />
         <Input
           type="url"
           extraClass="mb-12"
           name="image"
-          label="Ссылка на изображение подарка"
+          label="Link to gift image"
           onChange={onFormChange}
-          placeholder="Укажите ссылку"
+          placeholder="Please provide a link"
           required
         />
         <Textarea
           name="description"
           id={23}
-          placeholder="Несколько слов о вашем желании"
-          label="Расскажите о вашем подарке"
+          placeholder="A few words about your desire"
+          label="Tell us about your gift"
           onChange={onFormChange}
           maxLength={1024}
           required
@@ -188,16 +188,16 @@ const GiftAddModal = ({ onClose }) => {
           name="price"
           id={24}
           extraClass={`mb-16 ${styles.price_input}`}
-          label="Стоимость подарка (руб.)"
+          label="Gift cost (euro)"
           onChange={onFormChange}
-          placeholder="Укажите стоимость"
+          placeholder="Specify the cost"
           required
           min={0}
         />
         <Button
           type="submit"
           extraClass={styles.gift_btn}
-          text="Добавить подарок"
+          text="Add a gift"
           kind="secondary"
           disabled={!valid}
         />
@@ -215,7 +215,7 @@ const ProfileOptionsPopup = ({ closePopup, logout }) => {
           type="button"
           onClick={logout}
         >
-          Выйти из профиля
+          Logout
         </button>
         <div className={styles.line} />
         <NavLink
@@ -223,7 +223,7 @@ const ProfileOptionsPopup = ({ closePopup, logout }) => {
           className={`text text_type_button text_color_primary ${styles.popup_btn} ${styles.edit}`}
           onClick={closePopup}
         >
-          Редактировать профиль
+          Edit profile
         </NavLink>
       </div>
     </Modal>

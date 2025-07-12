@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- WishPool button: single purple tone #7E65FC, rounded edges -->
+<svg
+  width="400"
+  height="120"
+  viewBox="0 0 400 120"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-labelledby="title desc">
+
+  <title>WishPool logo</title>
+  <desc>Pill-shaped button with a white circle containing a purple gift icon, and the text WishPool.</desc>
+
+  <!-- Background with rounded corners -->
+  <rect x="0" y="0" width="400" height="120" rx="60" ry="60" fill="#7E65FC"/>
+
+  <!-- White circle for the icon background -->
+  <circle cx="60" cy="60" r="42" fill="#FFFFFF"/>
+
+  <!-- Gift body: two purple halves -->
+  <rect x="38" y="68" width="18" height="22" rx="3" fill="#7E65FC"/>
+  <rect x="64" y="68" width="18" height="22" rx="3" fill="#7E65FC"/>
+
+  <!-- Gift lid -->
+  <rect x="38" y="48" width="44" height="14" rx="3" fill="#7E65FC"/>
+
+  <!-- Bow loops -->
+  <path
+    d="
+      M60 46
+      C53 30 38 34 44 50
+      M60 46
+      C67 30 82 34 76 50"
+    stroke="#7E65FC"
+    stroke-width="8"
+    stroke-linecap="round"
+    fill="none"/>
+
+  <!-- White ribbons -->
+  <rect x="56" y="48" width="8" height="42" fill="#FFFFFF"/>
+  <rect x="38" y="60" width="44" height="8" fill="#FFFFFF"/>
+
+  <!-- Text -->
+  <text
+    x="120"
+    y="79"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="48"
+    font-weight="700"
+    fill="#FFFFFF">
+    WishPool
+  </text>
+</svg>

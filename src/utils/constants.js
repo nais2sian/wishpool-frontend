@@ -1,4 +1,4 @@
-export const URL = "http://localhost:3001";
+export const URL = "https://kupipodariday-backend.koyeb.app";
 export const MINIMUM_PASSWORD_LENGTH = 3;
 export const MINIMUM_USERNAME_LENGTH = 3;
 export const MAXIMUM_DESCRIPTION_LENGTH = 200;

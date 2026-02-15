@@ -1,4 +1,4 @@
-export const URL = "https://nutty-anna-diana-nais2sian-7c75c0d7.koyeb.app";
+export const URL = "https://kupipodariday-backend-sohs.onrender.com";
 export const MINIMUM_PASSWORD_LENGTH = 3;
 export const MINIMUM_USERNAME_LENGTH = 3;
 export const MAXIMUM_DESCRIPTION_LENGTH = 200;

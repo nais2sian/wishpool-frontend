@@ -1,7 +1,7 @@
 {
   "name": "wishpool-frontend",
   "version": "1.0.0",
-  "homepage": "https://nais2sian.github.io/wishpool-frontend",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
